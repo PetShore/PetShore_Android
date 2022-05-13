@@ -1,4 +1,4 @@
-package com.petshore.petshore_android.model;
+package com.petshore.petshore_android.network.model;
 
 public class InformacionCliente {
     public String clienteUsername,direccion;
