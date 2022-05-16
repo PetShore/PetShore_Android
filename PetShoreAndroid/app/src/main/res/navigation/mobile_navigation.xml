@@ -16,7 +16,7 @@
         android:name="com.petshore.petshore_android.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
-
+indNavController()
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.petshore.petshore_android.ui.slideshow.SlideshowFragment"

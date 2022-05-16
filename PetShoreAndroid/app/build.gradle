@@ -14,13 +14,14 @@ android {
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "ApiURl", "\"https://petshore-backend.herokuapp.com/\""
+            buildConfigField 'String', 'ApiURl', "\"https://petshore-backend.herokuapp.com/\""
         }
         stagging {
             initWith debug
