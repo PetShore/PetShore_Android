@@ -4,11 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.2694746376811594" />
+        <entry key="app/src/main/res/layout-w1240dp/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.26484375" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_register_form.xml" value="0.33" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/content_register_form.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.353125" />
       </map>
     </option>
   </component>
@@ -17,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>
