@@ -89,8 +89,8 @@ public class FormLoginAuth extends AppCompatActivity {
     private void sendAuthRequest() {
         Retrofit retrofit = RetrofitGenerator.getInstance(storage);
         AuthServices authService = retrofit.create(AuthServices.class);
-        TokenUser tokenUser = new TokenUser("prueba","prueba", null);
-        //TokenUser tokenUser = new TokenUser(binding.username.getText().toString(), binding.password.getText().toString(), null);
+        //TokenUser tokenUser = new TokenUser("prueba","prueba", null);
+        TokenUser tokenUser = new TokenUser(binding.username.getText().toString(), binding.password.getText().toString(), null);
         //LoginDto loginDto = new LoginDto(binding.inputUsername.getText().toString(), binding.inputPassword.getText().toString());
         Action1<TokenUser> successAction = tokenDto -> onAuthSuccess(tokenUser.getToken());
         Action1<Throwable> failedAction = throwable -> Log.e("Developer", "Auth error", throwable);
