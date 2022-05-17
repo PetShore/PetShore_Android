@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -81,6 +82,11 @@ public class FormLoginAuth extends AppCompatActivity {
                 sendAuthRequest();
             }
         });
+        final ImageButton imageButton = binding.imageButton;
+        imageButton.setOnClickListener(view1 -> {
+            Intent intent = new Intent(FormLoginAuth.this, RegisterForm.class);
+            startActivity(intent);
+        });
         SharedPreferences sharedPreferences = getSharedPreferences("SHARED_preferences", Context.MODE_PRIVATE);
         //SharedPreferences sharedPreferences = requireContext().getSharedPreferences("SHARED_preferences", Context.MODE_PRIVATE);
         storage = new sharePreferencesStorage(sharedPreferences);
@@ -92,7 +98,7 @@ public class FormLoginAuth extends AppCompatActivity {
         //TokenUser tokenUser = new TokenUser("prueba","prueba", null);
         TokenUser tokenUser = new TokenUser(binding.username.getText().toString(), binding.password.getText().toString(), null);
         //LoginDto loginDto = new LoginDto(binding.inputUsername.getText().toString(), binding.inputPassword.getText().toString());
-        Action1<TokenUser> successAction = tokenDto -> onAuthSuccess(tokenUser.getToken());
+        Action1<TokenUser> successAction = tokenDto -> onAuthSuccess(tokenDto.getToken());
         Action1<Throwable> failedAction = throwable -> Log.e("Developer", "Auth error", throwable);
         authService.login(tokenUser)
                 .subscribeOn(Schedulers.io())

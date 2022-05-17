@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.petshore.petshore_android">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,23 +16,25 @@
         android:theme="@style/Theme.PetShoreAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".RegisterForm"
+            android:exported="false"
+            android:label="@string/title_activity_register_form"
+            android:theme="@style/Theme.PetShoreAndroid.NoActionBar" />
+        <activity
             android:name=".FormLoginAuth"
             android:exported="true"
             android:label="@string/title_activity_login">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
-
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.PetShoreAndroid.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.PetShoreAndroid.NoActionBar"></activity>
     </application>
 
 </manifest>
